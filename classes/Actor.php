@@ -10,7 +10,7 @@ class Actor
   private $rating;
 
 
-public function _construct ($first_name, $last_name, $favorite_movie_id, $rating)
+public function __construct ($first_name, $last_name, $favorite_movie_id, $rating)
 {
   $this->first_name = $first_name;
   $this->last_name = $last_name;

@@ -22,7 +22,7 @@ require_once 'partials/navbar.php';
               </tr>
             </thead>
             <tbody>
-            <?php echo "<pre>"; var_dump($actors); exit; foreach ($actors as $actor): ?>
+            <?php  foreach ($actors as $actor): ?>
               <tr>
                 <th scope="row"><?php echo $actor->getFirst_name(); ?></th>
                 <td><?php echo $actor->getLast_name(); ?></td>

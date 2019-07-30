@@ -64,7 +64,7 @@
 		{
 			global $connection;
 
-			$stmt = $connection->prepare(" SELECT first_name, last_name, rating, favorite_movie_id FROM actors");
+			$stmt = $connection->prepare(" SELECT id, first_name, last_name, rating, favorite_movie_id FROM actors");
 
 			$stmt->execute();
 
@@ -73,8 +73,9 @@
 			$actorsObject = [];
 
 			foreach ($actors as $actor) {
+				
 				$finalActor = new Actor($actor['first_name'], $actor['last_name'], $actor['rating'], $actor['favorite_movie_id']);
-
+				$finalActor->setId($actor['id']);
 
 
 				$actorsObject[] = $finalActor;
